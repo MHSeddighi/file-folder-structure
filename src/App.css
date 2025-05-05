@@ -1,0 +1,23 @@
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
+.wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.word-nowrap {
+  display: flex;
+  word-break: keep-all;
+  flex-wrap: nowrap;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-wrap: normal;
+}
+
+.text-overflow-ellipsis {
+  text-overflow: ellipsis;
+}

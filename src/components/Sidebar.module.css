@@ -1,0 +1,94 @@
+.wrapper {
+  width: fit-content;
+  min-width: 300px;
+  background: #1a1a1a;
+  padding: 1rem;
+  color: azure;
+}
+
+.sidebar__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar__menu__add {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  pointer-events: all;
+}
+
+.sidebar__menu__add__btn {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  padding: 5px 5px;
+}
+
+.sidebar__menu:hover {
+  background-color: #1a1a1a;
+}
+
+.folder {
+  margin-left: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.item__name {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.folder__children {
+  margin-left: 16px;
+  border-left: 1px dashed #ccc;
+  padding-left: 8px;
+
+  transition: height 300ms ease-in-out;
+  overflow: hidden;
+}
+
+.file {
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.item__name--hovered {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  translate: 0 -50%;
+  visibility: hidden;
+  border-radius: 4px;
+  opacity: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.item__name:hover {
+  backdrop-filter: brightness(1.5);
+}
+.item__name:hover .item__name--hovered {
+  visibility: visible;
+  opacity: 1;
+}
+
+.item__name__arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  margin-right: 6px;
+}
+
+.item__name__arrow--rotated {
+  transform: rotate(90deg);
+}
